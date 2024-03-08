@@ -16,7 +16,7 @@ const Header = memo(function Header() {
             <i className="fa-solid fa-bars" suppressHydrationWarning></i>
             <div className="space-x-5">
               {_subNavItems?.map((_submenu) => (
-                <Link href={_submenu.href} className="text-base text-maingray">
+                <Link href={_submenu.href} key={_submenu?.label} className="text-base text-maingray">
                   {_submenu.label}
                 </Link>
               ))}

@@ -17,7 +17,7 @@ const Cards = ({ data: { title, description, images, price, rating, stock } }) =
             </h3>
             <div className="flex items-center gap-x-[6px] mt-[4px]">
               {[...new Array(5)].map((_star, _index) => {
-                return <i className={`fa-solid fa-star  ${_index + 1 <= Math.floor(rating) ? "text-[#E27C00]" : "text-lightbluish"}`} suppressHydrationWarning />;
+                return <i key={_star} className={`fa-solid fa-star  ${_index + 1 <= Math.floor(rating) ? "text-[#E27C00]" : "text-lightbluish"}`} suppressHydrationWarning />;
               })}
               <span className="text-[#E27C00] text-base">{rating}</span>
               <i className="fa-solid fa-circle text-[#C1D0E0] w-[6px] h-[6px]" suppressHydrationWarning />
