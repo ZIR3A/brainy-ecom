@@ -12,7 +12,7 @@ const Footer = memo(function Footer() {
       <div className="max-w-7xl mx-auto flex gap-16 justify-between py-6">
         <section className="space-y-4 max-w-72">
           <Image src={BrandImage} width="150" height="100" suppressHydrationWarning />
-          <h6 className="text-[#40597A]">Best information about the company gies here but now lorem ipsum is</h6>
+          <h6 className="text-semilight">Best information about the company gies here but now lorem ipsum is</h6>
           <div className="space-x-[10px]">
             {_socialMediaOptions?.map((_social) => (
               <span className="bg-[#40597A] rounded-full w-[30px] h-[30px] inline-flex items-center justify-center" suppressHydrationWarning>
@@ -27,7 +27,7 @@ const Footer = memo(function Footer() {
               <div className="space-y-3" key={_content?.header}>
                 <header className="text-[#040507] font-medium">{_content?.header}</header>
                 {_content?.children?.map((_child) => (
-                  <Link href={_child?.href} className="text-[#40597A] block" key={_child?.label}>
+                  <Link href={_child?.href} className="text-semilight block" key={_child?.label}>
                     {_child?.label}
                   </Link>
                 ))}

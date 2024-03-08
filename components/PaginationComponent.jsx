@@ -3,7 +3,7 @@ const PaginationComponent = ({ pages = 1, active }) => {
     <div className="flex justify-between py-4">
       <div>
         <form className="max-w-sm mx-auto">
-          <select id="countries" className="bg-white border border-gray-300 text-[#6587AB] text-sm rounded-lg focus:ring-[#5676FF] focus:border-[#5676FF] focus:outline-none block w-full p-1.5 ">
+          <select id="countries" className="bg-white border border-gray-300 text-lightbluish text-sm rounded-lg focus:ring-[#5676FF] focus:border-[#5676FF] focus:outline-none block w-full p-1.5 ">
             <option selected>Show 10</option>
           </select>
         </form>

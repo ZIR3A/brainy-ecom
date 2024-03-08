@@ -3,10 +3,39 @@
 @tailwind utilities;
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
   .bg-primary {
     background: #F2F5F9;
+  }
+
+  .text-semilight {
+    color: #40597A;
+  }
+
+  .text-graylight {
+    color: #8B96A5;
+  }
+
+  .text-maingray {
+    color: #2F394A;
+  }
+
+  .text-lightbluish {
+    color: #6587AB;
+  }
+
+  .text-bluish {
+    color: #0D6EFD;
+  }
+
+  .border-graylight {
+    border-color: #C1D0E0;
+  }
+
+  .border-blue {
+    border-color: #127FFF;
+  }
+
+  .bg-blue-header {
+    background: #127FFF;
   }
 }
