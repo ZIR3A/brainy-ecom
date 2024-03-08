@@ -18,7 +18,6 @@ const Lists = async (props) => {
     searchParams: { search },
   } = props;
   const products = await getData(search);
-  console.log(products, "@@");
   return (
     <ContentWrapper className="">
       <div className="max-w-7xl mx-auto">
