@@ -39,7 +39,7 @@ const TopHeader = () => {
         {/* cart component */}
         <div className="flex space-x-4 text-semilight">
           {_profileOptions?.map((_option) => (
-            <div className="text-center">
+            <div className="text-center" key={_option?.label}>
               <i className={_option?.icon} suppressHydrationWarning />
               <h3 className="text-xs">{_option?.label}</h3>
             </div>

@@ -16,7 +16,7 @@ const Footer = memo(function Footer() {
           <h6 className="text-semilight">Best information about the company gies here but now lorem ipsum is</h6>
           <div className="space-x-[10px]">
             {_socialMediaOptions?.map((_social) => (
-              <span className="bg-[#40597A] rounded-full w-[30px] h-[30px] inline-flex items-center justify-center" suppressHydrationWarning>
+              <span key={_social?.icon} className="bg-[#40597A] rounded-full w-[30px] h-[30px] inline-flex items-center justify-center" suppressHydrationWarning>
                 <i className={`${_social?.icon} !text-white`} suppressHydrationWarning />
               </span>
             ))}

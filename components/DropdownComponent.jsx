@@ -12,7 +12,7 @@ const DropdownComponent = ({ label, id, options }) => {
         <ul className="py-2 text-sm text-semilight" aria-labelledby={`dropdownElement${id}`}>
           {options?.map((_option) => {
             return (
-              <li>
+              <li key={_option?.label}>
                 <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                   {_option?.label}
                 </a>

@@ -12,7 +12,7 @@ const ListingFiltersComponent = memo(function ListingFiltersComponent(props) {
           Category <i class="fa-solid fa-chevron-up mt-1 float-end text-graylight" suppressHydrationWarning />
         </h3>
         {_categoriesOptions?.map((_category) => (
-          <span className="text-[#505050] block py-1">{_category?.label}</span>
+          <span className="text-[#505050] block py-1" key={_category?.label}>{_category?.label}</span>
         ))}
         <span className="text-bluish block py-1">See all</span>
       </div>
@@ -22,7 +22,7 @@ const ListingFiltersComponent = memo(function ListingFiltersComponent(props) {
         </h3>
         {_brandsOptions?.map((_brand) => (
           <span className="text-[#1C1C1C] block">
-            <CheckboxInput label={_brand?.label} />
+            <CheckboxInput label={_brand?.label} key={_brand?.label} />
           </span>
         ))}
         <span className="text-bluish block py-2">See all</span>
@@ -33,7 +33,7 @@ const ListingFiltersComponent = memo(function ListingFiltersComponent(props) {
         </h3>
         {_featureOptions?.map((_feature) => (
           <span className="text-[#1C1C1C] block">
-            <CheckboxInput label={_feature?.label} />
+            <CheckboxInput label={_feature?.label} key={_feature?.label} />
           </span>
         ))}
         <span className="text-bluish block py-2">See all</span>
@@ -66,9 +66,9 @@ const ListingFiltersComponent = memo(function ListingFiltersComponent(props) {
         <h3 className="font-semibold py-2">
           Condition <i class="fa-solid fa-chevron-up mt-1 float-end text-graylight" suppressHydrationWarning />
         </h3>
-        {_conditionOptions?.map((_feature) => (
+        {_conditionOptions?.map((_condition) => (
           <span className="text-[#1C1C1C] block">
-            <CheckboxInput label={_feature?.label} type="radio" />
+            <CheckboxInput label={_condition?.label} key={_condition?.label} type="radio" />
           </span>
         ))}
       </div>
@@ -79,7 +79,7 @@ const ListingFiltersComponent = memo(function ListingFiltersComponent(props) {
         {[...new Array(5)]?.map((_feature, _index, { length }) => {
           let _length = length - (_index + 1);
           return (
-            <span className="text-[#1C1C1C] flex">
+            <span className="text-[#1C1C1C] flex" key={_feature?.label}>
               <CheckboxInput label={_feature?.label} /> <RenderRatingOptions limit={5} length={_length} />
             </span>
           );
