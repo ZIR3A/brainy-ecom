@@ -98,3 +98,106 @@ export const _profileOptions = [
     icon: "fa-solid fa-cart-shopping",
   },
 ];
+export const _socialMediaOptions = [
+  {
+    icon: "fa-brands fa-facebook-f",
+  },
+  {
+    icon: "fa-brands fa-twitter",
+  },
+  {
+    icon: "fa-brands fa-linkedin",
+  },
+  {
+    icon: "fa-brands fa-instagram",
+  },
+  {
+    icon: "fa-brands fa-youtube",
+  },
+];
+export const _midFooterContents = [
+  {
+    header: "About",
+    children: [
+      {
+        label: "About Us",
+        href: "/",
+      },
+      {
+        label: "Find store",
+        href: "/",
+      },
+      {
+        label: "Categories",
+        href: "/",
+      },
+      {
+        label: "Blogs",
+        href: "/",
+      },
+    ],
+  },
+  {
+    header: "Partnership",
+    children: [
+      {
+        label: "About Us",
+        href: "/",
+      },
+      {
+        label: "Find store",
+        href: "/",
+      },
+      {
+        label: "Categories",
+        href: "/",
+      },
+      {
+        label: "Blogs",
+        href: "/",
+      },
+    ],
+  },
+  {
+    header: "Information",
+    children: [
+      {
+        label: "Help Center",
+        href: "/",
+      },
+      {
+        label: "Money Refund",
+        href: "/",
+      },
+      {
+        label: "Shipping",
+        href: "/",
+      },
+      {
+        label: "Contact us",
+        href: "/",
+      },
+    ],
+  },
+  {
+    header: "For users",
+    children: [
+      {
+        label: "Login",
+        href: "/",
+      },
+      {
+        label: "Register",
+        href: "/",
+      },
+      {
+        label: "Settings",
+        href: "/",
+      },
+      {
+        label: "My Orders",
+        href: "/",
+      },
+    ],
+  },
+];
