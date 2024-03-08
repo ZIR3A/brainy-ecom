@@ -5,6 +5,8 @@ import "./globals.css";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Head from "next/head";
+import brandImage from '../public/brandlogo.png'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href={brandImage.src} type="image/png" sizes="32x32"/>
+      </head>
       <body className={`${inter.className} bg-primary flex flex-col justify-between`}>
         {/* Header */}
         <Header />
