@@ -5,6 +5,7 @@ import PlayStoreImage from "../public/playstore.png";
 import Image from "next/image";
 import Link from "next/link";
 import { _midFooterContents, _socialMediaOptions } from "@/constants";
+import UsaFlag from "../public/usa.png";
 
 const Footer = memo(function Footer() {
   return (
@@ -40,6 +41,12 @@ const Footer = memo(function Footer() {
             </div>
           </div>
         </section>
+      </div>
+      <div className="text-[#606060] max-w-7xl mx-auto mt-[60px] mb-6 flex justify-between">
+        <span>© 2023 Ecommerce. </span>
+        <span className="flex items-center gap-2">
+          <Image src={UsaFlag} width={20} height={20} /> <span>English</span> <i className="fa-solid fa-angle-up" suppressHydrationWarning />
+        </span>
       </div>
     </div>
   );
