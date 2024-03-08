@@ -58,3 +58,43 @@ export const _conditionOptions = [
     label: "old items",
   },
 ];
+export const _subNavItems = [
+  {
+    label: "All category",
+    href: "/",
+  },
+  {
+    label: "Hot offers",
+    href: "/",
+  },
+  {
+    label: "Gift boxes",
+    href: "/",
+  },
+  {
+    label: "Projects",
+    href: "/",
+  },
+  {
+    label: "Menu item",
+    href: "/",
+  },
+];
+export const _profileOptions = [
+  {
+    label: "Profile",
+    icon: "fa-solid fa-user",
+  },
+  {
+    label: "Message",
+    icon: "fa-solid fa-message",
+  },
+  {
+    label: "Orders",
+    icon: "fa-solid fa-heart",
+  },
+  {
+    label: "My Cart",
+    icon: "fa-solid fa-cart-shopping",
+  },
+];
