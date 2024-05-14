@@ -11,7 +11,7 @@ import brandImage from '../public/brandlogo.png'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Brany Ecommerce",
+  title: "Saran Ecommerce",
   description: "Ecom",
 };
 
