@@ -6,11 +6,18 @@ import BreadcrumbsComponent from "@/components/BreadcrumbsComponent";
 import EmailComponent from "@/components/EmailComponent";
 import { _brandsOptions, _categoriesOptions, _conditionOptions, _featureOptions } from "@/constants";
 import ListingFiltersComponent from "@/components/ListingFiltersComponent";
+import Image from "next/image";
+import Link from "next/link";
 
 async function getData(query) {
   const res = await fetch(`https://dummyjson.com/products/search?q=${query}`);
   const products = await res.json();
   return products;
+}
+async function getAdsData() {
+  const adsApi = await fetch(`https://ads.rozilshrestha.com.np/adserve?zone_id=13&type=json`);
+  const adResponse = await adsApi.json();
+  return adResponse;
 }
 
 const Lists = async (props) => {
@@ -18,6 +25,7 @@ const Lists = async (props) => {
     searchParams: { search },
   } = props;
   const products = await getData(search);
+  const adsData = await getAdsData(search);
   return (
     <ContentWrapper className="">
       <div className="max-w-7xl mx-auto">
@@ -27,6 +35,11 @@ const Lists = async (props) => {
           <ProductsListingComponent products={products} search={search} />
         </div>
         <PaginationComponent pages={3} active={1} />
+      </div>
+      <div className="mx-auto my-4 h-72 relative">
+        <Link href={adsData?.redirect_url} target={adsData?.target}>
+          <Image className="absolute rounded-md" src={adsData?.image_url} fill objectFit="contain" />
+        </Link>
       </div>
       <EmailComponent />
     </ContentWrapper>
