@@ -1,11 +1,26 @@
-import React from "react";
+"use client"
+import React, {useState, useEffect} from "react";
 import BrandImage from "../public/brandlogo.png";
 import Image from "next/image";
 import BasicInput from "@/shared/Forms/BasicInput";
 import { _profileOptions } from "@/constants";
 import Link from "next/link";
+import { useRouter,useSearchParams } from "next/navigation";
 
 const TopHeader = () => {
+  const [searchInput, setSearchInput] = useState("")
+  const router = useRouter();
+  const searchParams = useSearchParams()
+  const onSubmitSearch = (event) => {
+    event.preventDefault()
+    if(searchInput) {
+      router.push(`/lists?search=${searchInput}`)
+    }
+  }
+  const search = searchParams.get('search')
+  useEffect(()=> {
+    setSearchInput(search || "")
+  },[search])
   return (
     <header className="bg-white px-4 xl:px-0">
       <div className="max-w-7xl mx-auto h-16 flex items-center justify-between">
@@ -15,9 +30,9 @@ const TopHeader = () => {
         </Link>
         {/* search component */}
         <div className="">
-          <form className="max-w-lg mx-auto">
+          <form className="max-w-lg mx-auto" onSubmit={onSubmitSearch}>
             <div className="flex w-full">
-              <BasicInput id="search-dropdown" className="!h-9 w-full lg:min-w-96 z-20 text-sm text-semilight bg-white rounded-lg border-2 border-e-0 rounded-e-none !border-blue" placeHolder="Search..." required />
+              <BasicInput id="search-dropdown" value={searchInput} onChange={({target: {value}}) => setSearchInput(value)} className="!h-9 w-full lg:min-w-96 z-20 text-sm text-semilight bg-white rounded-lg border-2 border-e-0 rounded-e-none !border-blue" placeHolder="Search..." required name="search-header-input" />
               <button id="dropdown-button" data-dropdown-toggle="dropdown" className="flex-shrink-0 h-9 z-10 inline-flex items-center py-2.5 px-4 text-sm text-center text-gray-900 bg-white border-2 rounded-s-none border-blue focus:outline-none focus:ring-gray-100" type="button">
                 All category
                 <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
