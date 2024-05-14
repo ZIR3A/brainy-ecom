@@ -3,13 +3,16 @@ import BrandImage from "../public/brandlogo.png";
 import Image from "next/image";
 import BasicInput from "@/shared/Forms/BasicInput";
 import { _profileOptions } from "@/constants";
+import Link from "next/link";
 
 const TopHeader = () => {
   return (
     <header className="bg-white px-4 xl:px-0">
       <div className="max-w-7xl mx-auto h-16 flex items-center justify-between">
         {/* Brand image component */}
-        <Image src={BrandImage} width="150" height="100" />
+        <Link href={"/"}>
+          <Image src={BrandImage} width="150" height="100" />
+        </Link>
         {/* search component */}
         <div className="">
           <form className="max-w-lg mx-auto">
