@@ -9,7 +9,9 @@ import { _subNavItems } from "@/constants";
 const Header = memo(function Header() {
   return (
     <div className="">
-      <TopHeader />
+      <React.Suspense fallback="">
+        <TopHeader />
+      </React.Suspense>
       <header className="border-t border-b border-graylight bg-white shadow-md px-4 xl:px-0">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-14">
           <div className="flex items-center gap-3">

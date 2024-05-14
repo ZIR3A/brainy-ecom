@@ -1,11 +1,11 @@
-"use client"
+'use client'
 import React, {useState, useEffect} from "react";
 import BrandImage from "../public/brandlogo.png";
 import Image from "next/image";
 import BasicInput from "@/shared/Forms/BasicInput";
 import { _profileOptions } from "@/constants";
 import Link from "next/link";
-import { useRouter,useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const TopHeader = () => {
   const [searchInput, setSearchInput] = useState("")
@@ -14,7 +14,7 @@ const TopHeader = () => {
   const onSubmitSearch = (event) => {
     event.preventDefault()
     if(searchInput) {
-      router.push(`/lists?search=${searchInput}`)
+      router.replace(`/lists?search=${searchInput}`)
     }
   }
   const search = searchParams.get('search')

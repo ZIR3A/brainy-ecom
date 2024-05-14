@@ -36,7 +36,7 @@ const Lists = async (props) => {
         </div>
         <PaginationComponent pages={3} active={1} />
       </div>
-      {adResponse &&
+      {adsData &&
         <div className={`mx-auto mb-4 h-40 relative`}>
           <Link href={adsData?.redirect_url} target={adsData?.target}>
             <Image className="absolute rounded-md" src={adsData?.image_url} fill objectFit="contain" />
